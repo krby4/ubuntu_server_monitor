@@ -1,0 +1,10 @@
+[Unit]
+Description=Deletes old pyLogger csv's once a day
+
+[Timer]
+OnCalendar=daily
+Persistent=true
+RandomizedDelaySec=10m
+
+[Install]
+WantedBy=timers.target

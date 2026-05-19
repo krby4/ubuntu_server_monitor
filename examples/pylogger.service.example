@@ -1,0 +1,16 @@
+[Unit]
+Description=Collects system metrics
+After=network-online.target
+
+[Service]
+Type=oneshot
+User={{user}}
+Group=services
+WorkingDirectory={{working_dir}}
+ExecStart={{exec_start}}
+
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

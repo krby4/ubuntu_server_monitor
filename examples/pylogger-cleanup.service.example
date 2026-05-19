@@ -1,0 +1,15 @@
+[Unit]
+Description=Deletes old log files
+After=network-online.target
+[Service]
+Type=oneshot
+User={{user}}
+Group=services
+WorkingDirectory={{working_dir}}
+ExecStart={{exec_start}}
+
+StandardError=journal
+StandardOutput=journal
+
+[Install]
+WantedBy=multi-user.target
