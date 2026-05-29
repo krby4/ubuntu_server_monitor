@@ -11,7 +11,7 @@ fi
 
 find "$LOG_DIR" \
     -type f \
-    -name "metrics_*.csv" \
+    -name "*metrics.csv" \
     -mtime +"$DAYS_KEPT" \
     -print \
     -delete
